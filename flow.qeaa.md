@@ -114,7 +114,7 @@ sequenceDiagram
         RelyingParty ->> RelyingParty: Check relevant QEAAs revocation<br> status by comparing against locally cached<br> status list (published by QTSP)
     else Direct Query (Legacy/Limited Use)
         RelyingParty ->> QTSP: Check relevant QEAAs revocation status<br> by quring the QTSP
-        QTSP ->> RP: Confirm valid
+        QTSP ->> RelyingParty: Confirm valid
     end
     RelyingParty ->> Wallet: Grant access per application logic
 ```
